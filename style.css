@@ -1,0 +1,223 @@
+.nav-item {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1.125rem;
+    color: #17285d;
+}
+.nav-link {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1.125rem;
+    color: #17285d;
+}
+.navbar-logo {
+    width: 77px;
+}
+#sign-in {
+    border: none;
+    padding: 10px;
+}
+#sign-in:hover {
+    text-decoration: underline;
+}
+#register {
+    border-radius: 20px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+#intro-photo {
+    width: 100px;
+}
+.header {
+    position: absolute;
+    top: 70%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+   
+}
+#homepage-header {
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+}
+#search-button {
+    background: #126f9a;
+    color: #fff;
+    margin: 0 auto 20px 0;
+    font-weight: 600;
+    position: absolute;
+    top: 110%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    border-radius: 30px;
+    padding: 8px;
+}
+.inline-search-container {
+    background: #dceef7;
+    padding: 25px;
+}
+.search-title {
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: #126f9a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Style the search field */
+form.search input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+
+  float: left;
+  width: 40%;
+  background: #f1f1f1;
+}
+
+/* Style the submit button */
+form.search button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+}
+
+form.search button:hover {
+  background: #0b7dda;
+}
+
+/* Clear floats */
+form.search::after {
+  content: "";
+  clear: both;
+  display: table;
+} 
+
+.row-slider {
+    width: 350px;
+    height: 250px;
+    margin: 50px;
+    padding: 10px;
+    }
+
+/* Marketing Dev */
+#homepage-subheader {
+    width: 100%;
+    padding:20px;
+    margin: 20px;
+    background-color: #f4f7ff;
+    text-align: center;
+}
+.subheader {
+    font-weight: bold;
+    color: #23419f;
+}
+.subjects-title {
+    font-weight: bold;
+}
+.card-header {
+    background-color: #126f9a;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 30px;
+}
+.card-body {
+    background-color: #f0f5ff;
+}
+.topic-link {
+    color: #2968aa;
+}
+.card {
+    padding: 10px;
+    margin: 10px;
+}
+.card-header {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+}
+#card-sign {
+    color: #2968aa;
+    background-color: #f0f5ff;
+    border-radius: 50%;
+    padding: 10px;
+    margin: 5px;
+}
+#online {
+    font-weight: bold;
+    font-size: medium;
+    background-color: white;
+}
+#online:hover {
+    color: #000000;
+    font-weight: bold;
+    font-size: medium;
+    background-color: #f0f5ff;
+}
+.carousel-control-prev {
+    background-color: f0f5ff;
+}
+.footer-logo {
+    width: 77px;
+}
+.vl {
+    border-right: 2px solid black;
+    height: 200px;
+}
+h2 {
+    font-family: Georgia;
+}
+
+.social-media-section {
+    width: 85%; 
+    margin: auto;
+}
+
+.social-media-button {
+    font-size: 1rem;
+    color: white;
+    width: 30px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.facebook {
+    background-color: #23419f;
+}
+.facebook:hover {
+    background-color: #142e7c;
+}
+.twitter {
+    background-color: #23419f;
+}
+.twitter:hover {
+    background-color: #142e7c;
+}
+.linkedin {
+    background-color: #23419f;
+}
+.linkedin:hover {
+    background-color: #142e7c;
+}
+.reddit {
+    background-color: #23419f;
+}
+.reddit:hover {
+    background-color: #142e7c;
+}

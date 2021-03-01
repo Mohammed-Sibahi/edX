@@ -47,14 +47,14 @@ if (isset($_POST["submit"])) {
 
     }
 
-    if (uidExists($conn, $username) !== false) {
+    if (uidExists($conn, $username, $email) !== false) {
 
         header("location: ../signup.php?error=usernametaken");
         exit();
 
     }
 
-createUsers($conn, $name, $email, $username, $pwd);
+createUser($conn, $name, $email, $username, $pwd);
 
 
 }

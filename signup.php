@@ -65,7 +65,7 @@ include_once 'header.php';
 
                             <!--password-->
                             <div class="input-group">
-                                <input class="input--style-2" type="text" placeholder="Password..." name="pwd">
+                                <input class="input--style-2" type="password" placeholder="Password..." name="pwd">
                             </div>
 
 
@@ -83,6 +83,43 @@ include_once 'header.php';
                     </div>
                 </div>
 
+<?php
+
+if (isset($_GET["error"])) {
+
+    if ($_GET["error"] == "emptyinput") {
+
+        echo "<p>Fill in all the blanks</p>";
+    }
+    else if ($_GET["error"] == "invaliduid") {
+
+        echo "<p>Choose a proper username</p>";
+    }
+
+    else if ($_GET["error"] == "invalidemail") {
+
+        echo "<p>Choose a proper email</p>";
+    }
+
+    else if ($_GET["error"] == "passowrdsdontmatch") {
+
+        echo "<p>Passwords do not match</p>";
+    }
+
+    else if ($_GET["error"] == "stmtfailed") {
+
+        echo "<p>Username is already taken!</p>";
+    }
+
+    else if ($_GET["error"] == "none") {
+
+        echo "<p>You have signed up!</p>";
+    }
+
+
+}
+
+?>
 
             </section>
 

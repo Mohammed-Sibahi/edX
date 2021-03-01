@@ -17,7 +17,7 @@ include_once 'header.php';
     <meta name="keywords" content="Colorlib Templates">
 
     <!-- Title Page-->
-    <title>edX Sign Up</title>
+    <title>edX Log In</title>
 
     <!-- Icons font CSS-->
     <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
@@ -40,28 +40,14 @@ include_once 'header.php';
                 <div class="card card-2">
                     <div class="card-heading"></div>
                     <div class="card-body">
-                        <h2 class="title">Sign Up Form</h2>
+                        <h2 class="title">Log In Form</h2>
 
-                        <form method="POST" action="includes/signup.inc.php">
+                        <form method="POST" action="includes/login.inc.php">
 
                             <!--full name-->
                             <div class="input-group">
-                                <input class="input--style-2" type="text" placeholder="Full Name..." name="name">
+                                <input class="input--style-2" type="text" placeholder="Username / Email..." name="name">
                             </div>
-
-
-                            <!--email-->
-                            <div class="input-group">
-                                <input class="input--style-2" type="text" placeholder="Email..." name="email">
-                            </div>
-
-
-
-                            <!--Username-->
-                            <div class="input-group">
-                                <input class="input--style-2" type="text" placeholder="Username..." name="uid">
-                            </div>
-
 
                             <!--password-->
                             <div class="input-group">
@@ -69,15 +55,8 @@ include_once 'header.php';
                             </div>
 
 
-                            <!--confirm password-->
-                            <div class="input-group">
-                                <input class="input--style-2" type="text" placeholder="Confirm password..." name="pwdrepeat">
-                            </div>
-
-
-                            <!--submit button-->
                             <div class="p-t-30">
-                                <button class="btn btn--radius btn--green" name="submit" type="submit">Sign Up</button>
+                                <button class="btn btn--radius btn--green" name="submit" type="submit">Log In</button>
                             </div>
                         </form>
                     </div>

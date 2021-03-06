@@ -46,7 +46,7 @@ include_once 'header.php';
 
                             <!--full name-->
                             <div class="input-group">
-                                <input class="input--style-2" type="text" placeholder="Username / Email..." name="name">
+                                <input class="input--style-2" type="text" placeholder="Username / Email..." name="uid">
                             </div>
 
                             <!--password-->
@@ -62,7 +62,21 @@ include_once 'header.php';
                     </div>
                 </div>
 
+                <?php
 
+if (isset($_GET["error"])) {
+
+    if ($_GET["error"] == "emptyinput") {
+
+        echo "<p>Fill in all the blanks</p>";
+    }
+    else if ($_GET["error"] == "wronglogin") {
+
+        echo "<p>Incorrect login information!</p>";
+    }
+}
+
+?>
             </section>
 
         </div>

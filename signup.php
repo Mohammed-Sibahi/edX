@@ -1,10 +1,3 @@
-<?
-
-include_once 'header.php';
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -141,8 +134,3 @@ if (isset($_GET["error"])) {
 </html>
 <!-- end document-->
 
-<?
-
-include_once 'footer.php';
-
-?>

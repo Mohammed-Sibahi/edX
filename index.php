@@ -1,9 +1,111 @@
-<?
+<?php
 
-include_once 'header.php';
-
+session_start();
 
 ?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>edX Website</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#"><img src="logo1.png" class="navbar-logo"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Courses
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Architecture</a>
+              <a class="dropdown-item" href="#">Art & Culture</a>
+              <a class="dropdown-item" href="#">Biology & Life Sciences</a>
+              <a class="dropdown-item" href="#">Business & Management</a>
+              <a class="dropdown-item" href="#">Chemistry</a>
+              <a class="dropdown-item" href="#">Communication</a>
+              <a class="dropdown-item" href="#">Computer Science</a>
+              <a class="dropdown-item" href="#">Data Analysis & Statistics</a>
+              <a class="dropdown-item" href="#">Electronics</a>
+              <a class="dropdown-item" href="#">Energy & Earth Sciences</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">All Subjects</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Programs & Degrees
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Schools & Partners</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">edX for Business</a>
+          </li>
+
+        </ul>
+      </div>
+
+
+
+      <form class="form-inline my-2 my-lg-0">
+        <i class="fa fa-search" aria-hidden="true"></i>
+        
+        <?php
+
+if (isset($_SESSION["useruid"])) {
+
+  echo '<button class="btn btn-outline-link my-2 my-sm-0" id="sign-in" href="profile.php" type="submit">Profile page</button>';
+
+  echo '<button type="button" id="register" href"includes/logout.inc.php" class="btn btn-outline-primary">Log out</button>';
+}
+
+else {
+  echo '<button class="btn btn-outline-link my-2 my-sm-0" id="sign-in" href="signup.php" type="submit">Sign up</button>';
+
+  echo '<button type="button" id="register" href="login.php" class="btn btn-outline-primary">Log in</button>';
+
+}
+
+?>
+
+      </form>
+    </div>
+  </nav>
+
+  <main id="main-content" class="" name="main-content" tabindex="-1" aria-label="Content">
+
 
 <img style="width:100%" src="http://images.ctfassets.net/ii9ehdcj88bc/1rscYXV6y6gf3yOY9tGGyj/29c3946d30385e8b954e37a81181af68/979px.jpg">
 <div id="homepage-header" class="col-11 col-md-8 col-lg-6">
@@ -257,9 +359,186 @@ include_once 'header.php';
 
 </div>
 
-<?
+</main>
 
-include_once 'footer.php';
+  <!-- Footer -->
+  <div class="site-footer-wrapper">
+    <footer class="page-footer font-small indigo">
+
+      <!-- Footer Links -->
+      <div class="container text-center text-md-left">
+
+        <!-- Grid row -->
+        <div class="row">
+
+          <!-- Grid column -->
+          <div class="col-md-2 mx-auto">
+            <div class="area-1">
+              <!-- Links -->
+              <h5 class="font-weight-bold text-uppercase mt-3 mb-4"><img class="footer-logo" src="logo1.png"></h5>
+              <i class="fa fa-language" aria-hidden="true"></i>
+              <select id="site-footer-language-select" class="mx-2 mt-1" name="site-footer-langauge-select">
+                <option selected="" value="en">English</option>
+                <option value="es">español</option>
+              </select>
+              <button class="mt-1" type="submit">Apply</button>
+            </div>
+          </div>
+          <div class="vl"></div>
+
+          <!-- Grid column -->
+          <div class="col-md-3 mx-auto">
+
+            <!-- Links -->
+            <h2 class="font-weight-bold text-uppercase mt-3 mb-4">edX</h2>
+
+            <ul class="list-unstyled">
+              <li>
+                <a href="#!">About</a>
+              </li>
+              <li>
+                <a href="#!">edX for Business</a>
+              </li>
+              <li>
+                <a href="#!">Affiliates</a>
+              </li>
+              <li>
+                <a href="#!">Open edX</a>
+              </li>
+              <li>
+                <a href="#!">Careers</a>
+              </li>
+              <li>
+                <a href="#!">News</a>
+              </li>
+            </ul>
+
+          </div>
+          <div class="vl"></div>
+
+          <div class="col-md-3 mx-auto">
+
+            <!-- Links -->
+            <h2 class="font-weight-bold text-uppercase mt-3 mb-4">Legal</h2>
+
+            <ul class="list-unstyled">
+              <li>
+                <a href="#!">Terms of Service & Honor Code</a>
+              </li>
+              <li>
+                <a href="#!">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="#!">Accessibility Policy</a>
+              </li>
+              <li>
+                <a href="#!">Trademark Policy </a>
+              </li>
+              <li>
+                <a href="#!">Sitemap</a>
+              </li>
+            </ul>
+
+          </div>
+          <div class="vl"></div>
+
+          <div class="col-md-3 mx-auto">
+
+            <!-- Links -->
+            <h2 class="font-weight-bold text-uppercase mt-3 mb-4">Connect</h2>
+
+            <ul class="list-unstyled">
+              <li>
+                <a href="#!">Blog</a>
+              </li>
+              <li>
+                <a href="#!">Contact Us</a>
+              </li>
+              <li>
+                <a href="#!">Help Center</a>
+              </li>
+              <li>
+                <a href="#!">Media Kit</a>
+              </li>
+              <li>
+                <a href="#!">Donate</a>
+              </li>
+            </ul>
+
+          </div>
+          <div class="vl"></div>
+
+          <div class="col-md-2 mx-auto">
 
 
-?>
+            <!-- Copyright -->
+
+
+            <div class="social-media-section">
+              <a href="#" class="social-media-button facebook"><i class="fa fa-facebook"></i></a>
+              <a href="#" class="social-media-button twitter"><i class="fa fa-twitter"></i></a>
+              <a href="#" class="social-media-button linkedin"><i class="fa fa-linkedin"></i></a>
+              <a href="#" class="social-media-button reddit"><i class="fa fa-reddit"></i></a>
+            </div>
+            <div class="footer-copyright text-center py-3">© 2020 edX Inc. All rights reserved. 深圳市恒宇博科技有限公司
+              <a href="https://mdbootstrap.com/">
+                | 粤ICP备17044299号-2</a>
+            </div>
+            <!-- Copyright -->
+          </div>
+    </footer>
+    <!-- Footer -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script type="text/javascript">
+      $('.slick-slider').slick({
+        dots: true,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        prevArrow: $('.prev'),
+        nextArrow: $('.next'),
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      });
+    </script>
+
+
+</body>
+
+</html>

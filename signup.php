@@ -72,7 +72,13 @@
                             <div class="p-t-30">
                                 <button class="btn btn--radius btn--green" name="submit" type="submit">Sign Up</button>
                             </div>
+
+                            
                         </form>
+
+                        <div class="p-t-30">
+                                <button  class="btn btn--radius btn--green"><a id="login-btn" href="login.php">  Log in</a></button>
+                            </div>
                     </div>
                 </div>
 

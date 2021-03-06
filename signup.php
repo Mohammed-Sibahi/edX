@@ -97,7 +97,7 @@ if (isset($_GET["error"])) {
     else if ($_GET["error"] == "passowrdsdontmatch") {
 
         echo "<p>Passwords do not match</p>";
-    }
+    } 
 
     else if ($_GET["error"] == "stmtfailed") {
 

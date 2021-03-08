@@ -64,7 +64,7 @@
 
                             <!--confirm password-->
                             <div class="input-group">
-                                <input class="input--style-2" type="text" placeholder="Confirm password..." name="pwdrepeat">
+                                <input class="input--style-2" type="password" placeholder="Confirm password..." name="pwdrepeat">
                             </div>
 
 

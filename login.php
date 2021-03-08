@@ -51,7 +51,7 @@ include_once 'header.php';
 
                             <!--password-->
                             <div class="input-group">
-                                <input class="input--style-2" type="text" placeholder="Password..." name="pwd">
+                                <input class="input--style-2" type="password" placeholder="Password..." name="pwd">
                             </div>
 
 
